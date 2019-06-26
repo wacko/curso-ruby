@@ -505,12 +505,33 @@ Goodbye
   <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">end</span>
 </span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" data-paginate="true" data-theme="gaia" data-style="pre code { background: black}
+" data-marpit-pagination="31" style="--paginate:true;--theme:gaia;
+;">
+<pre><code class="language-ruby"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>namespace <span class="hljs-symbol">:reports</span> <span class="hljs-keyword">do</span>
+  task <span class="hljs-symbol">:first</span> <span class="hljs-keyword">do</span>; <span class="hljs-keyword">end</span>
+  task <span class="hljs-symbol">:second</span> <span class="hljs-keyword">do</span>; <span class="hljs-keyword">end</span>
+
+  desc <span class="hljs-string">"run monthly report"</span>
+  task <span class="hljs-symbol">monthly:</span> [<span class="hljs-symbol">:first</span>, <span class="hljs-symbol">:second</span>] <span class="hljs-keyword">do</span>
+  <span class="hljs-keyword">end</span>
+
+  task <span class="hljs-symbol">:user</span>, [<span class="hljs-symbol">:name</span>, <span class="hljs-symbol">:email</span>] <span class="hljs-keyword">do</span> <span class="hljs-params">|task, args|</span>
+    puts <span class="hljs-string">"work"</span>, args[<span class="hljs-symbol">:email</span>]
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-paginate="true" data-theme="gaia" data-style="pre code { background: black}
+" data-marpit-pagination="32" style="--paginate:true;--theme:gaia;
+;">
 <pre><code class="language-shell"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-meta">$</span><span class="bash"> rake reports:monthly</span>
 <span class="hljs-meta">$</span><span class="bash"> rake reports:user[joaquin,joaquin@gmail.com]</span>
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" data-paginate="true" data-theme="gaia" data-style="pre code { background: black}
-" data-marpit-pagination="31" style="--paginate:true;--theme:gaia;
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-paginate="true" data-theme="gaia" data-style="pre code { background: black}
+" data-marpit-pagination="33" style="--paginate:true;--theme:gaia;
 ;">
 <pre><code class="language-shell"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-meta">$</span><span class="bash"> rake -T</span>
 
