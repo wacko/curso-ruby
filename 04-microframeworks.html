@@ -590,11 +590,17 @@ h1 code {
 ;">
 <h1>Sinatra</h1>
 <pre><code class="language-ruby"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-comment"># Nested routes</span>
-post <span class="hljs-string">'/post/:id/comments'</span>
-  @post = Post.find params[<span class="hljs-string">'email'</span>]
+get <span class="hljs-string">'/post/:id/comments'</span>
+  @post = Post.find params[<span class="hljs-string">'id'</span>]
   @comments = @post.comments
-
   erb <span class="hljs-symbol">:comments</span>
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-comment"># Local params</span>
+get <span class="hljs-string">'/post/:id/comments'</span>
+  post = Post.find params[<span class="hljs-string">'id'</span>]
+  comments = post.comments
+  erb <span class="hljs-symbol">:comments</span>, <span class="hljs-symbol">locals:</span> {<span class="hljs-symbol">post:</span> post, <span class="hljs-symbol">comments:</span> comments}
 <span class="hljs-keyword">end</span>
 </span></span></foreignObject></svg></code></pre>
 </section>
